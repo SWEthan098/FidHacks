@@ -1,0 +1,86 @@
+[
+  {
+    "id": "mentor_001",
+    "body": "I almost skipped my first internship application because I only met half the requirements. Apply anyway. Let them decide — not your fear.",
+    "author": "Recent fintech graduate",
+    "tag": "Confidence",
+    "targetConfidenceLevels": [1, 2, 3]
+  },
+  {
+    "id": "mentor_002",
+    "body": "The first time I negotiated salary I was terrified. I used a simple script and got $5k more. The worst they can say is no — and they rarely do.",
+    "author": "Software engineer, 3 years out",
+    "tag": "Negotiation",
+    "targetConfidenceLevels": [1, 2]
+  },
+  {
+    "id": "mentor_003",
+    "body": "Open a Roth IRA with your first internship paycheck. Even $50/month starting at 20 becomes something extraordinary at 60. Future you will thank you.",
+    "author": "Investment analyst",
+    "tag": "Investing",
+    "targetConfidenceLevels": [1, 2, 3, 4, 5]
+  },
+  {
+    "id": "mentor_004",
+    "body": "Your network is not about knowing the 'right' people. It's about being genuinely curious about the person in front of you. Start there.",
+    "author": "Product manager at a top-10 bank",
+    "tag": "Networking",
+    "targetConfidenceLevels": [1, 2, 3]
+  },
+  {
+    "id": "mentor_005",
+    "body": "I grew up without money conversations in my home. I had to learn everything on my own. That's why I'm here — so you don't have to figure it out alone.",
+    "author": "First-gen financial advisor",
+    "tag": "Community",
+    "targetConfidenceLevels": [1, 2, 3]
+  },
+  {
+    "id": "mentor_006",
+    "body": "Asking 'what's the comp range?' is not awkward. It is professional. Every recruiter expects the question. Write it down and practice saying it out loud.",
+    "author": "Tech recruiter, 6 years experience",
+    "tag": "Salary",
+    "targetConfidenceLevels": [1, 2, 3, 4]
+  },
+  {
+    "id": "mentor_007",
+    "body": "The emergency fund felt impossible on a $10/hr campus job. I saved $10/week. It took a year to hit $500. That $500 saved me when my car broke down junior year.",
+    "author": "Business operations lead",
+    "tag": "Savings",
+    "targetConfidenceLevels": [1, 2, 3, 4, 5]
+  },
+  {
+    "id": "mentor_008",
+    "body": "You don't need a perfect resume to apply. You need a good-enough resume sent to 20 companies. Volume beats perfection at the internship stage.",
+    "author": "Data scientist, 2 years out",
+    "tag": "Career",
+    "targetConfidenceLevels": [1, 2, 3]
+  },
+  {
+    "id": "mentor_009",
+    "body": "Being the only woman in the room used to make me shrink. Now I treat it as information — this company needs more of us. I decide if I want to be the one.",
+    "author": "Engineering director",
+    "tag": "Confidence",
+    "targetConfidenceLevels": [1, 2]
+  },
+  {
+    "id": "mentor_010",
+    "body": "One of my biggest money regrets was not tracking my spending for two years. Not to restrict myself — just to know. Knowledge is the starting point.",
+    "author": "CPA and women's finance coach",
+    "tag": "Budgeting",
+    "targetConfidenceLevels": [1, 2, 3, 4, 5]
+  },
+  {
+    "id": "mentor_011",
+    "body": "Internship income planning changed everything for me. I treated my summer earnings like a mini-budget: savings first, then everything else.",
+    "author": "Finance major turned analyst",
+    "tag": "Planning",
+    "targetConfidenceLevels": [1, 2, 3, 4]
+  },
+  {
+    "id": "mentor_012",
+    "body": "LinkedIn is not just for job hunting. It's a research tool. Look up where women from your school ended up. Reach out to three of them this month.",
+    "author": "Consulting recruiter",
+    "tag": "Networking",
+    "targetConfidenceLevels": [2, 3, 4, 5]
+  }
+]

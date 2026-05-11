@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* ── Fonts ────────────────────────────────────────────────────── */
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans:  var(--font-inter), system-ui, sans-serif;
+
+  /* ── Brand Colors ─────────────────────────────────────────────── */
+  --color-forest:       #263D28;
+  --color-fidelity:     #526A49;
+  --color-sage:         #DDE3D2;
+  --color-cream:        #F7F3EA;
+  --color-warm-white:   #FFFCF5;
+  --color-muted-gold:   #C39B3A;
+  --color-soft-beige:   #EFE6D6;
+  --color-warm-brown:   #5C4B3F;
+  --color-border-beige: #D7CDBA;
+
+  /* ── Pin Colors ───────────────────────────────────────────────── */
+  --color-pin-yellow:   #FFF3B0;
+  --color-pin-sage:     #DDE8D4;
+  --color-pin-blue:     #DCEAF6;
+  --color-pin-cream:    #FDF8ED;
+  --color-pin-rose:     #F4D9D5;
+  --color-pin-lavender: #E8E1F2;
+
+  /* ── Shadows ──────────────────────────────────────────────────── */
+  --shadow-pin:  2px 4px 12px rgba(92,75,63,0.18);
+  --shadow-card: 0 2px 8px rgba(92,75,63,0.10);
+
+  /* ── Animations ───────────────────────────────────────────────── */
+  --animate-pin-drop:   pin-drop 0.4s ease-out forwards;
+  --animate-pulse-gold: pulse-gold 1.5s ease-in-out infinite;
+  --animate-fade-in:    fade-in 0.5s ease-out forwards;
+
+  @keyframes pin-drop {
+    0%   { transform: translateY(-20px) rotate(var(--pin-rotation, 0deg)); opacity: 0; }
+    100% { transform: translateY(0)     rotate(var(--pin-rotation, 0deg)); opacity: 1; }
+  }
+  @keyframes pulse-gold {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.4; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* ── Base Styles ──────────────────────────────────────────────────── */
+html {
+  background-color: var(--color-cream);
+  color: var(--color-warm-brown);
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-warm-brown);
+  background-color: var(--color-cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--color-soft-beige); }
+::-webkit-scrollbar-thumb { background: var(--color-border-beige); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-muted-gold); }

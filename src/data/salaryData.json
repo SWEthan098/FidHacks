@@ -1,0 +1,82 @@
+[
+  {
+    "id": "sal_001",
+    "role": "Software Engineering Intern",
+    "industry": "Technology",
+    "entryLevel": 28,
+    "midLevel": 45,
+    "tip": "Always ask about total comp: stipends, housing, and relocation matter. Many FAANG internships pay $40–50/hr plus housing."
+  },
+  {
+    "id": "sal_002",
+    "role": "Investment Banking Analyst",
+    "industry": "Finance",
+    "entryLevel": 95000,
+    "midLevel": 130000,
+    "tip": "Base salary is just the start. Year-end bonuses at bulge-bracket banks can be 50–100% of base. Negotiate your start date and signing bonus."
+  },
+  {
+    "id": "sal_003",
+    "role": "Data Analyst Intern",
+    "industry": "Data Analytics",
+    "entryLevel": 22,
+    "midLevel": 35,
+    "tip": "SQL and Python skills significantly boost intern comp. Certifications in Tableau or Power BI can increase your rate by $5–8/hr."
+  },
+  {
+    "id": "sal_004",
+    "role": "Product Management Intern",
+    "industry": "Product Management",
+    "entryLevel": 30,
+    "midLevel": 50,
+    "tip": "PM intern pay varies widely. At top tech companies expect $35–55/hr. Startup PMs often earn less cash but gain more responsibility and equity."
+  },
+  {
+    "id": "sal_005",
+    "role": "Consulting Analyst",
+    "industry": "Consulting",
+    "entryLevel": 85000,
+    "midLevel": 105000,
+    "tip": "At MBB firms (McKinsey, BCG, Bain), first-year analysts earn $85–90k base. Expect significant travel stipends on top of base pay."
+  },
+  {
+    "id": "sal_006",
+    "role": "Marketing Coordinator / Intern",
+    "industry": "Marketing",
+    "entryLevel": 18,
+    "midLevel": 25,
+    "tip": "Marketing pay varies by company size. Negotiate by highlighting social or content portfolio. Remote roles at tech companies pay 20–40% more."
+  },
+  {
+    "id": "sal_007",
+    "role": "Cybersecurity Intern",
+    "industry": "Cybersecurity",
+    "entryLevel": 25,
+    "midLevel": 42,
+    "tip": "Government and defense cybersecurity internships require clearance but pay premium rates. Private sector roles reward certifications like CompTIA Security+."
+  },
+  {
+    "id": "sal_008",
+    "role": "Financial Planning & Analysis Intern",
+    "industry": "Finance",
+    "entryLevel": 20,
+    "midLevel": 30,
+    "tip": "FP&A internships at large corporations pay $18–28/hr. Excel modeling skills are your biggest leverage point for comp negotiation."
+  },
+  {
+    "id": "sal_009",
+    "role": "Business Operations Intern",
+    "industry": "Business",
+    "entryLevel": 18,
+    "midLevel": 28,
+    "tip": "Business ops roles at startups often come with equity. Ask about vesting schedules and what a realistic exit looks like before accepting."
+  },
+  {
+    "id": "sal_010",
+    "role": "UX/Product Design Intern",
+    "industry": "Technology",
+    "entryLevel": 24,
+    "midLevel": 40,
+    "tip": "Portfolio quality drives pay more than GPA for design roles. A strong Figma portfolio with 2–3 case studies can add $5–10/hr to your rate."
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "pause_001",
+    "title": "Eating Out Budget Check",
+    "body": "You've been spending heavily on food. Every $50 week of eating out adds up to $2,600/year. Setting a $30/week dining budget saves you $1,040 — enough for your emergency fund and more.",
+    "category": "food",
+    "tag": "Spending"
+  },
+  {
+    "id": "pause_002",
+    "title": "Subscription Stack Check",
+    "body": "Multiple streaming, app, and delivery subscriptions can hit $80–120/month without you noticing. Take 5 minutes to list yours. Cancel anything you've used less than once a week.",
+    "category": "subscriptions",
+    "tag": "Quick Win"
+  },
+  {
+    "id": "pause_003",
+    "title": "Shopping Cart Pause",
+    "body": "Before you checkout, leave items in your cart for 48 hours. If you still want them, buy them. This one rule reduces impulse purchases by 30–50% for most people.",
+    "category": "clothes",
+    "tag": "Spending"
+  },
+  {
+    "id": "pause_004",
+    "title": "Social Spending Reality Check",
+    "body": "FOMO spending is real. Before saying yes to an expensive plan, ask: can I suggest a cheaper alternative? 'Let's cook together instead' is always an option — and often more fun.",
+    "category": "social",
+    "tag": "Mindset"
+  },
+  {
+    "id": "pause_005",
+    "title": "Beauty Budget Awareness",
+    "body": "Beauty and self-care spending adds up fast. Not a judgment — just an awareness moment. Try setting a monthly cap ($30–50) and shopping the dupes for one item this month.",
+    "category": "beauty",
+    "tag": "Spending"
+  },
+  {
+    "id": "pause_006",
+    "title": "Transport Spending Review",
+    "body": "Rideshare and transport costs often go unnoticed. Check last month's total. If it's over $80, explore: campus shuttle, bike share, or carpooling. Small swaps = big savings.",
+    "category": "transportation",
+    "tag": "Savings"
+  }
+]

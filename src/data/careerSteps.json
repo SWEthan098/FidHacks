@@ -1,0 +1,82 @@
+[
+  {
+    "id": "career_001",
+    "title": "Apply to 5 Internships This Week",
+    "body": "Pick 5 companies in your field. Find their intern programs. Apply even if you feel underqualified. Getting 1 callback from 5 applications is normal — not failure.",
+    "industry": ["Technology", "Finance", "Business", "Consulting", "Marketing"],
+    "tag": "Action",
+    "timeNeeded": "2–3 hours"
+  },
+  {
+    "id": "career_002",
+    "title": "Set Up Your LinkedIn Profile Today",
+    "body": "A completed LinkedIn profile is your digital handshake. Add your school, major, any projects, and a professional photo. Then connect with 5 classmates and one professor.",
+    "industry": ["All fields"],
+    "tag": "Career",
+    "timeNeeded": "45 minutes"
+  },
+  {
+    "id": "career_003",
+    "title": "Research Salary Before Your Next Interview",
+    "body": "Use Levels.fyi, LinkedIn Salary, or Glassdoor to find the range for your role and city. Write down your floor — the minimum you'd accept — before you walk in.",
+    "industry": ["Technology", "Finance", "Business", "Consulting"],
+    "tag": "Salary",
+    "timeNeeded": "30 minutes"
+  },
+  {
+    "id": "career_004",
+    "title": "Message One Alum This Week",
+    "body": "Find a woman who graduated from your school and works in your field. Send a short message: who you are, what you're pursuing, and one specific question. Most people want to help.",
+    "industry": ["All fields"],
+    "tag": "Networking",
+    "timeNeeded": "15 minutes"
+  },
+  {
+    "id": "career_005",
+    "title": "Add One Project to Your Resume",
+    "body": "Class project, personal project, or club work — it counts. Describe it in two bullet points: what you built and what the impact was. Quantify if possible.",
+    "industry": ["Technology", "Data Analytics", "Marketing", "Product Management"],
+    "tag": "Resume",
+    "timeNeeded": "30 minutes"
+  },
+  {
+    "id": "career_006",
+    "title": "Ask Your Professor About Research",
+    "body": "Research opportunities are often unpaid but lead to publications, grad school letters, and network connections. Email one professor this week. Ask if they have student openings.",
+    "industry": ["Data Analytics", "Technology", "Finance"],
+    "tag": "Academia",
+    "timeNeeded": "10 minutes"
+  },
+  {
+    "id": "career_007",
+    "title": "Prepare Your 60-Second Intro",
+    "body": "Write and rehearse a 60-second version of: who you are, what you study, what you want to do, and why. Use it at every networking event and career fair this semester.",
+    "industry": ["All fields"],
+    "tag": "Networking",
+    "timeNeeded": "20 minutes"
+  },
+  {
+    "id": "career_008",
+    "title": "Join a Women's Professional Community",
+    "body": "Find one women-focused professional club or online community in your field. AnitaB.org, Women in Finance, WiCyS — these communities share jobs, advice, and referrals.",
+    "industry": ["Technology", "Finance", "Cybersecurity"],
+    "tag": "Community",
+    "timeNeeded": "20 minutes"
+  },
+  {
+    "id": "career_009",
+    "title": "Practice One Behavioral Interview Answer",
+    "body": "Use the STAR format: Situation, Task, Action, Result. Pick a challenge you've overcome and practice telling it in 90 seconds. Record yourself. Watch it once.",
+    "industry": ["All fields"],
+    "tag": "Interview",
+    "timeNeeded": "30 minutes"
+  },
+  {
+    "id": "career_010",
+    "title": "Learn to Read a Job Description",
+    "body": "Required = must have. Preferred = nice to have. Apply if you meet 60%+ of required skills. Many women wait until they meet 100%. The gap is the gap. Apply now.",
+    "industry": ["All fields"],
+    "tag": "Strategy",
+    "timeNeeded": "15 minutes"
+  }
+]

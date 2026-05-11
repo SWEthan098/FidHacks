@@ -1,0 +1,58 @@
+[
+  {
+    "id": "community_001",
+    "title": "Ask the Board: Internship Pay",
+    "body": "Q: \"How do I ask if an internship is paid without sounding awkward?\" — A: Ask directly after they describe the role: 'Could you share the compensation range for this position?' Recruiters expect it.",
+    "tag": "Salary",
+    "communityGoals": ["salary", "internship", "negotiation"]
+  },
+  {
+    "id": "community_002",
+    "title": "Ask the Board: First Budget",
+    "body": "Q: \"I've never budgeted before. Where do I even start?\" — A: Start by tracking, not restricting. Write down every purchase for 7 days. That's step one. Rules come after awareness.",
+    "tag": "Budgeting",
+    "communityGoals": ["budgeting", "first-time", "money"]
+  },
+  {
+    "id": "community_003",
+    "title": "Ask the Board: Negotiation Fear",
+    "body": "Q: \"I'm terrified to negotiate. What if they take back the offer?\" — A: Offers are almost never rescinded for polite negotiation. The worst outcome is 'no.' The best is more money.",
+    "tag": "Negotiation",
+    "communityGoals": ["negotiation", "confidence", "salary"]
+  },
+  {
+    "id": "community_004",
+    "title": "Community Story: First Internship",
+    "body": "\"I applied to 22 companies. Got 3 callbacks. Had 2 interviews. Got 1 offer. It was rejection city — until it wasn't. Apply in volume. The math works in your favor.\"",
+    "tag": "Internship",
+    "communityGoals": ["internship", "confidence", "career"]
+  },
+  {
+    "id": "community_005",
+    "title": "Ask the Board: Roth IRA for Students",
+    "body": "Q: \"Can I open a Roth IRA as a college student?\" — A: Yes, if you have earned income (campus job, internship). You can contribute up to $7,000/year. Open one at Fidelity — no minimums.",
+    "tag": "Investing",
+    "communityGoals": ["investing", "roth-ira", "money"]
+  },
+  {
+    "id": "community_006",
+    "title": "Community Story: Being the Only Woman",
+    "body": "\"My first internship team was 8 people — 7 men. I doubted myself constantly. By week 4 I realized my ideas were landing. Imposter syndrome lied to me. It'll lie to you too.\"",
+    "tag": "Confidence",
+    "communityGoals": ["confidence", "workplace", "community"]
+  },
+  {
+    "id": "community_007",
+    "title": "Ask the Board: Student Loans",
+    "body": "Q: \"My loan amount is overwhelming. What do I focus on first?\" — A: First, know what type you have. Subsidized = no interest in school. Then calculate your monthly payment at graduation. Knowledge removes panic.",
+    "tag": "Loans",
+    "communityGoals": ["student-loans", "debt", "money"]
+  },
+  {
+    "id": "community_008",
+    "title": "Ask the Board: Networking Without Connections",
+    "body": "Q: \"I have no network. How do I start?\" — A: Start on LinkedIn. Find 3 alumni from your school in your field. Send a 3-sentence message: who you are, what you're pursuing, one question. Most people respond.",
+    "tag": "Networking",
+    "communityGoals": ["networking", "linkedin", "career"]
+  }
+]

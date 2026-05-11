@@ -1,0 +1,112 @@
+[
+  {
+    "id": "opp_001",
+    "title": "Google STEP Internship",
+    "body": "A 12-week software internship for first- and second-year undergrads. Competitive pay, mentorship, and the Google network. Applications open in August.",
+    "tag": "Tech",
+    "ctaLabel": "Learn More",
+    "ctaUrl": "https://careers.google.com/students/",
+    "industry": ["Technology", "Software Engineering"],
+    "womenOnly": false,
+    "deadline": "October 2025"
+  },
+  {
+    "id": "opp_002",
+    "title": "Girls Who Invest Summer Intensive",
+    "body": "Fully funded 4-week program for women pursuing investment management. Covers asset management, private equity, and hedge funds. Housing and travel included.",
+    "tag": "Finance",
+    "ctaLabel": "Apply Now",
+    "ctaUrl": "https://www.girlswhoinvest.org/",
+    "industry": ["Finance", "Investment Management"],
+    "womenOnly": true,
+    "deadline": "January 2026"
+  },
+  {
+    "id": "opp_003",
+    "title": "Fidelity Investments Intern Program",
+    "body": "Summer internships across technology, finance, and business operations. Fidelity actively recruits women and first-gen students. Paid, with mentorship tracks.",
+    "tag": "Finance",
+    "ctaLabel": "View Openings",
+    "ctaUrl": "https://jobs.fidelity.com/students/",
+    "industry": ["Finance", "Technology", "Business"],
+    "womenOnly": false,
+    "deadline": "November 2025"
+  },
+  {
+    "id": "opp_004",
+    "title": "Rewriting the Code Fellowship",
+    "body": "A community and fellowship for college women in tech. Access to company partners, events, mentors, and a supportive network of 25,000+ women.",
+    "tag": "Tech",
+    "ctaLabel": "Join the Community",
+    "ctaUrl": "https://rewritingthecode.org/",
+    "industry": ["Technology", "Software Engineering", "Data Analytics"],
+    "womenOnly": true,
+    "deadline": "Rolling"
+  },
+  {
+    "id": "opp_005",
+    "title": "JP Morgan Women on the Move Campus",
+    "body": "Networking events, internship pathways, and resources designed specifically for women entering finance and banking. Apply through campus recruiting.",
+    "tag": "Finance",
+    "ctaLabel": "Explore Program",
+    "ctaUrl": "https://careers.jpmorgan.com/students/",
+    "industry": ["Finance", "Investment Management", "Consulting"],
+    "womenOnly": true,
+    "deadline": "September 2025"
+  },
+  {
+    "id": "opp_006",
+    "title": "Microsoft Leap — Aspire Program",
+    "body": "A rotational program for students with non-traditional backgrounds. Includes STEM and business tracks. Microsoft prioritizes diversity in its hiring.",
+    "tag": "Tech",
+    "ctaLabel": "Learn More",
+    "ctaUrl": "https://careers.microsoft.com/students/",
+    "industry": ["Technology", "Product Management", "Data Analytics"],
+    "womenOnly": false,
+    "deadline": "October 2025"
+  },
+  {
+    "id": "opp_007",
+    "title": "Out in Finance & Technology Summit",
+    "body": "A career summit for LGBTQ+ students entering finance and technology. Interviews, networking, and company expo all in one weekend.",
+    "tag": "Community",
+    "ctaLabel": "Register",
+    "ctaUrl": "https://outinfinance.com/",
+    "industry": ["Finance", "Technology"],
+    "womenOnly": false,
+    "deadline": "March 2026"
+  },
+  {
+    "id": "opp_008",
+    "title": "Grace Hopper Celebration Scholarship",
+    "body": "The world's largest gathering of women technologists. Apply for a free scholarship to attend and connect with thousands of engineers and companies.",
+    "tag": "Tech",
+    "ctaLabel": "Apply for Scholarship",
+    "ctaUrl": "https://ghc.anitab.org/",
+    "industry": ["Technology", "Software Engineering", "Cybersecurity"],
+    "womenOnly": true,
+    "deadline": "April 2026"
+  },
+  {
+    "id": "opp_009",
+    "title": "Deloitte National Leadership Conference",
+    "body": "For high-performing students interested in consulting and business. All-expenses-paid conference with case workshops and recruiter access.",
+    "tag": "Consulting",
+    "ctaLabel": "Apply",
+    "ctaUrl": "https://apply.deloitte.com/",
+    "industry": ["Consulting", "Business", "Finance"],
+    "womenOnly": false,
+    "deadline": "December 2025"
+  },
+  {
+    "id": "opp_010",
+    "title": "Visa Technology Immersion Program",
+    "body": "A 5-day immersive experience for women in tech at Visa HQ. Job shadow, workshops, and early internship consideration.",
+    "tag": "Tech",
+    "ctaLabel": "Apply Now",
+    "ctaUrl": "https://usa.visa.com/careers/",
+    "industry": ["Technology", "Product Management", "Data Analytics"],
+    "womenOnly": true,
+    "deadline": "November 2025"
+  }
+]

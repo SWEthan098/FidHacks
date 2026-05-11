@@ -1,0 +1,72 @@
+[
+  {
+    "id": "budget_001",
+    "title": "Build Your $500 Emergency Fund First",
+    "body": "Before anything else, save $500. This single buffer covers most unexpected expenses: car repair, medical copay, textbooks. Save $10/week and you're there in under a year.",
+    "category": "emergency-fund",
+    "tag": "Savings"
+  },
+  {
+    "id": "budget_002",
+    "title": "Internship Income Plan",
+    "body": "If you earn $4,000 this summer, consider: 40% savings, 30% school expenses, 20% personal spending, 10% investing or exploring. Adjust as needed — but plan before you spend.",
+    "category": "income-planning",
+    "tag": "Planning"
+  },
+  {
+    "id": "budget_003",
+    "title": "The $5 Trick for Overspending",
+    "body": "Before any non-essential purchase over $20, wait 48 hours. If you still want it, buy it. You'll be surprised how often the impulse disappears.",
+    "category": "overspending",
+    "tag": "Spending"
+  },
+  {
+    "id": "budget_004",
+    "title": "Cancel One Subscription Today",
+    "body": "Open your bank app. Find a subscription you forgot about. Cancel it. That $12–15/month is $144–180/year — enough to seed your emergency fund.",
+    "category": "subscriptions",
+    "tag": "Quick Win"
+  },
+  {
+    "id": "budget_005",
+    "title": "What Is a Roth IRA and Why You Should Start Now",
+    "body": "A Roth IRA lets you invest after-tax dollars that grow tax-free. $50/month starting at 20 can become $150,000+ by 60 with average market returns. Open one at Fidelity or Schwab — no minimums.",
+    "category": "investing",
+    "tag": "Investing"
+  },
+  {
+    "id": "budget_006",
+    "title": "Track One Week of Spending",
+    "body": "Don't budget yet — just observe. Write down every purchase for 7 days. No judgment. The goal is to see your actual patterns before making changes.",
+    "category": "tracking",
+    "tag": "Awareness"
+  },
+  {
+    "id": "budget_007",
+    "title": "Student Loan 101",
+    "body": "Know the type of loan you have. Subsidized loans (Federal Direct) don't accrue interest while enrolled. Unsubsidized do. Understanding this before graduation can save thousands.",
+    "category": "student-loans",
+    "tag": "Loans"
+  },
+  {
+    "id": "budget_008",
+    "title": "Build Credit the Safe Way",
+    "body": "Get a secured credit card or become an authorized user on a parent's account. Use it for small purchases. Pay it in full every month. Good credit saves you money on everything later.",
+    "category": "credit",
+    "tag": "Credit"
+  },
+  {
+    "id": "budget_009",
+    "title": "Campus Job Income Plan",
+    "body": "Even 10 hours/week at $15/hr is $600/month. Before spending it, assign every dollar a purpose: $200 savings, $200 food, $100 personal, $100 emergency fund. Done.",
+    "category": "campus-job",
+    "tag": "Planning"
+  },
+  {
+    "id": "budget_010",
+    "title": "Food Budget Without Starving",
+    "body": "Food is the easiest category to overspend. Try a simple rule: 3 meals out per week max. Cook twice as much when you do cook. Meal prep Sunday is 30 min that saves $50+.",
+    "category": "food",
+    "tag": "Spending"
+  }
+]
