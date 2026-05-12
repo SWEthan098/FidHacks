@@ -16,10 +16,12 @@ export const initialState: AppState = {
   onboarding: initialOnboarding,
   board: [],
   savedPinIds: [],
+  boardVariant: 0,
   ui: {
     sidebarOpen: true,
     activePinId: null,
     boardGenerated: false,
+    hasSeenGenAnimation: false,
   },
 }
 
@@ -94,6 +96,25 @@ export function reducer(state: AppState, action: AppAction): AppState {
         board: action.payload,
         ui: { ...state.ui, boardGenerated: true },
       }
+
+    case 'ADD_USER_PIN':
+      return {
+        ...state,
+        board: [action.payload, ...state.board],
+      }
+
+    case 'REMOVE_PIN':
+      return {
+        ...state,
+        board: state.board.filter((p) => p.id !== action.payload),
+        savedPinIds: state.savedPinIds.filter((id) => id !== action.payload),
+      }
+
+    case 'CYCLE_BOARD_VARIANT':
+      return { ...state, boardVariant: (state.boardVariant + 1) % 3 }
+
+    case 'SET_HAS_SEEN_GEN_ANIMATION':
+      return { ...state, ui: { ...state.ui, hasSeenGenAnimation: true } }
 
     case 'SAVE_PIN':
       return {

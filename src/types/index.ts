@@ -95,6 +95,11 @@ export type PinType =
 
 export type PinColor = 'yellow' | 'sage' | 'blue' | 'cream' | 'rose' | 'lavender'
 
+export interface PinResource {
+  label: string
+  url: string
+}
+
 export interface BoardPin {
   id: string
   type: PinType
@@ -108,6 +113,11 @@ export interface BoardPin {
   isSaved: boolean
   priority: number
   sourceId: string
+  author?: string
+  avatarColor?: string
+  resources?: PinResource[]
+  contactEmail?: string
+  isUserCreated?: boolean
 }
 
 // ── Mock Data Pool Entries ────────────────────────────────────────────────────
@@ -190,9 +200,11 @@ export interface AppState {
   onboarding: OnboardingState
   board: BoardPin[]
   savedPinIds: string[]
+  boardVariant: number
   ui: {
     sidebarOpen: boolean
     activePinId: string | null
     boardGenerated: boolean
+    hasSeenGenAnimation: boolean
   }
 }

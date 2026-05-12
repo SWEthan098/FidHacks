@@ -16,9 +16,9 @@ const YEAR_OPTIONS = [
 ]
 
 const FIRSTGEN_OPTIONS = [
-  { value: 'yes', label: 'Yes, first-generation' },
+  { value: 'yes', label: 'Yes, I am' },
   { value: 'no', label: 'No' },
-  { value: 'unsure', label: 'Unsure' },
+  { value: 'unsure', label: 'Not sure' },
   { value: 'prefer_not', label: 'Prefer not to say' },
 ]
 
@@ -43,15 +43,15 @@ export default function AboutPage() {
 
   return (
     <OnboardingCard
-      caption="Step 1 of 9"
-      heading="Let's start with you."
-      subheading="Your board works best when it understands where you are right now."
+      caption="Step 1 of 5"
+      heading="Welcome. Let's build your board."
+      subheading="ConnectHer is built by women, for women — your answers help us personalize every pin you see."
       onNext={handleNext}
     >
       <Input
         id="preferredName"
         label="What should we call you?"
-        placeholder="Preferred name"
+        placeholder="Your preferred name"
         value={preferredName}
         onChange={(e) => setPreferredName(e.target.value)}
       />

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { OnboardingCard } from '@/components/onboarding/OnboardingCard'
 import { MultiSelectChips } from '@/components/onboarding/MultiSelectChips'
+import { SingleSelect } from '@/components/onboarding/SingleSelect'
 import { useApp } from '@/context/AppContext'
 
 const COMMUNITY_OPTIONS = [
@@ -19,32 +20,63 @@ const COMMUNITY_OPTIONS = [
   { value: 'prefer_not', label: 'Prefer not to say' },
 ]
 
+const SUPPORT_OPTIONS = [
+  { value: 'full', label: 'Full support from family' },
+  { value: 'partial', label: 'Partial support' },
+  { value: 'limited', label: 'Limited support' },
+  { value: 'no_support', label: 'No financial support' },
+  { value: 'variable', label: 'It changes month to month' },
+  { value: 'prefer_not', label: 'Prefer not to say' },
+]
+
+const LOANS_OPTIONS = [
+  { value: 'yes', label: 'Yes' },
+  { value: 'no', label: 'No' },
+  { value: 'not_sure', label: "Not sure" },
+  { value: 'prefer_not', label: 'Prefer not to say' },
+]
+
 export default function IdentityPage() {
   const router = useRouter()
   const { state, dispatch } = useApp()
-  const saved = state.onboarding.identity
+  const savedIdentity = state.onboarding.identity
+  const savedFinancial = state.onboarding.financial
 
-  const [communities, setCommunities] = useState<string[]>(saved.communityIdentities ?? [])
+  const [communities, setCommunities] = useState<string[]>(savedIdentity.communityIdentities ?? [])
+  const [supportLevel, setSupportLevel] = useState(savedFinancial.familySupportLevel ?? '')
+  const [loans, setLoans] = useState(savedFinancial.hasStudentLoans ?? '')
 
   function handleNext() {
     dispatch({ type: 'UPDATE_ONBOARDING_IDENTITY', payload: { communityIdentities: communities } })
-    router.push('/onboarding/family-finances')
+    dispatch({ type: 'UPDATE_ONBOARDING_FINANCIAL', payload: { familySupportLevel: supportLevel, hasStudentLoans: loans } })
+    router.push('/onboarding/money-habits')
   }
 
   return (
     <OnboardingCard
-      caption="Step 2 of 9"
-      heading="Help us find resources that actually fit you."
-      subheading="These questions are optional. Select any communities you identify with so we can recommend relevant scholarships, programs, and support."
+      caption="Step 2 of 5"
+      heading="We want to find resources that fit you."
+      subheading="Every woman's financial situation is different. These answers help us recommend scholarships, programs, and support made for you."
       onNext={handleNext}
       onBack={() => router.push('/onboarding/about')}
     >
       <div className="bg-sage/20 border border-sage rounded-xl p-3">
         <p className="font-sans text-xs text-fidelity">
-          Your answers are only used to expand support resources — never to limit them. Skip anything you prefer not to share.
+          All questions are optional. Your answers only expand what we recommend — never limit it.
         </p>
       </div>
-      <MultiSelectChips options={COMMUNITY_OPTIONS} selected={communities} onChange={setCommunities} />
+      <div>
+        <p className="font-sans text-sm text-warm-brown font-medium mb-2">Communities you identify with <span className="text-warm-brown/50 font-normal">(optional)</span></p>
+        <MultiSelectChips options={COMMUNITY_OPTIONS} selected={communities} onChange={setCommunities} />
+      </div>
+      <div>
+        <p className="font-sans text-sm text-warm-brown font-medium mb-2">How much financial support do you receive from family?</p>
+        <SingleSelect options={SUPPORT_OPTIONS} value={supportLevel} onChange={setSupportLevel} columns={2} />
+      </div>
+      <div>
+        <p className="font-sans text-sm text-warm-brown font-medium mb-2">Do you have student loans?</p>
+        <SingleSelect options={LOANS_OPTIONS} value={loans} onChange={setLoans} columns={2} />
+      </div>
     </OnboardingCard>
   )
 }

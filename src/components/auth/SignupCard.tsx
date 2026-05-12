@@ -40,20 +40,9 @@ export function SignupCard() {
   }
 
   return (
-    <div className="w-full max-w-md mx-auto bg-warm-white rounded-3xl p-8 lg:p-10 shadow-card border border-border-beige/50">
-      <div className="flex justify-between mb-6 text-muted-gold">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l1.8 5.4L16 8l-6.2 2.6L8 16l-1.8-5.4L0 8l6.2-2.6z"/></svg>
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><path d="M5 0l1 3.1L9.5 5l-3.5 1.9L5 10l-1-3.1L0 5l3.5-1.9z"/></svg>
-      </div>
-
-      <h2 className="font-serif text-3xl text-forest font-semibold mb-1">Create Your Account</h2>
-      <p className="font-sans text-sm text-warm-brown/70 mb-2">Start your financial freedom journey</p>
-
-      <div className="bg-sage/30 border border-sage rounded-xl p-3 mb-6">
-        <p className="font-sans text-xs text-fidelity leading-relaxed">
-          Some questions ahead are personal. We use your answers only to personalize your board. You can skip any question.
-        </p>
-      </div>
+    <div className="w-full max-w-sm mx-auto">
+      <h2 className="font-serif text-2xl text-forest font-semibold mb-1 text-center">Create your account</h2>
+      <p className="font-sans text-sm text-warm-brown/60 mb-6 text-center">Start your financial freedom journey</p>
 
       {error && (
         <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl text-sm text-red-600 font-sans">{error}</div>
@@ -73,7 +62,11 @@ export function SignupCard() {
         </Button>
       </form>
 
-      <p className="font-sans text-center text-sm text-warm-brown/60 mt-5">
+      <p className="font-sans text-xs text-warm-brown/40 text-center mt-4 leading-relaxed max-w-xs mx-auto">
+        Some questions ahead are personal — we use your answers only to personalize your board.
+      </p>
+
+      <p className="font-sans text-center text-sm text-warm-brown/60 mt-4">
         Already have an account?{' '}
         <Link href="/login" className="text-muted-gold hover:text-forest font-medium transition-colors">
           Log in

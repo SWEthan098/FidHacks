@@ -2,14 +2,15 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { LayoutDashboard, Bookmark, MessageSquare, User, Star } from 'lucide-react'
+import { LayoutDashboard, PieChart, Bookmark, MessageSquare, User, Star } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useApp } from '@/context/AppContext'
 
 const NAV = [
+  { href: '/dashboard',  label: 'Dashboard',  icon: PieChart },
   { href: '/board',      label: 'My Board',   icon: LayoutDashboard },
   { href: '/saved-pins', label: 'Saved Pins', icon: Bookmark },
-  { href: '/ask-board',  label: 'Ask Board',  icon: MessageSquare },
+  { href: '/ask-board',  label: 'Ask ConnectHer AI',  icon: MessageSquare },
   { href: '/profile',    label: 'Profile',    icon: User },
 ]
 

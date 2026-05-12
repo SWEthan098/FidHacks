@@ -45,11 +45,7 @@ export function BasePin({ pin, onClick, children, className, draggable, onDragSt
       onClick={onClick}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      onDragStart={(e) => {
-        e.dataTransfer.setData('text/plain', pin.id)
-        e.dataTransfer.effectAllowed = 'move'
-        onDragStart?.()
-      }}
+      onDragStart={onDragStart}
       onDragEnd={() => { setHovered(false); onDragEnd?.() }}
       onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onClick()}
       className={cn(

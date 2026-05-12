@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import type { BoardPin, PinColor } from '@/types'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
-import { Bookmark, BookmarkCheck, X, ExternalLink } from 'lucide-react'
+import { Bookmark, BookmarkCheck, X, ExternalLink, Mail } from 'lucide-react'
 
 const HEADER_BG: Record<PinColor, string> = {
   yellow:   'bg-pin-yellow',
@@ -13,6 +13,10 @@ const HEADER_BG: Record<PinColor, string> = {
   cream:    'bg-pin-cream',
   rose:     'bg-pin-rose',
   lavender: 'bg-pin-lavender',
+}
+
+function getInitials(name: string) {
+  return name.split(' ').map((n) => n[0]).join('').slice(0, 2).toUpperCase()
 }
 
 interface PinModalProps {
@@ -36,7 +40,10 @@ export function PinModal({ pin, onClose, onSave, onUnsave }: PinModalProps) {
       role="dialog"
       aria-modal="true"
     >
-      <div className="w-full max-w-lg bg-warm-white rounded-3xl overflow-hidden shadow-2xl animate-fade-in">
+      <div
+        className="w-full max-w-lg bg-warm-white rounded-3xl overflow-hidden shadow-2xl"
+        style={{ animation: 'modal-pop 0.22s cubic-bezier(0.34,1.56,0.64,1) both' }}
+      >
         {/* Header */}
         <div className={`${HEADER_BG[pin.color]} px-6 pt-8 pb-5 relative`}>
           <button
@@ -47,11 +54,61 @@ export function PinModal({ pin, onClose, onSave, onUnsave }: PinModalProps) {
           </button>
           {pin.tag && <Badge label={pin.tag} variant="gold" className="mb-3" />}
           <h3 className="font-serif text-2xl text-forest font-semibold leading-snug">{pin.title}</h3>
+
+          {/* Author in header */}
+          {pin.author && (
+            <div className="flex items-center gap-2 mt-3">
+              <div
+                className="w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-sans font-bold text-forest"
+                style={{ backgroundColor: pin.avatarColor ?? '#DDE3D2' }}
+              >
+                {getInitials(pin.author)}
+              </div>
+              <span className="font-sans text-xs text-warm-brown/70 font-medium">{pin.author}</span>
+              {pin.isUserCreated && (
+                <span className="font-sans text-[10px] bg-warm-white/60 text-fidelity px-2 py-0.5 rounded-full font-semibold">Community</span>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Body */}
         <div className="px-6 py-5">
           <p className="font-sans text-sm text-warm-brown leading-relaxed">{pin.body}</p>
+
+          {/* Resources section */}
+          {pin.resources && pin.resources.length > 0 && (
+            <div className="mt-4">
+              <p className="font-sans text-xs text-warm-brown/50 uppercase tracking-widest font-semibold mb-2">Resources</p>
+              <div className="flex flex-col gap-1.5">
+                {pin.resources.map((r) => (
+                  <a
+                    key={r.url}
+                    href={r.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 font-sans text-sm text-fidelity hover:text-forest transition-colors"
+                  >
+                    <ExternalLink size={12} className="shrink-0" />
+                    {r.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Contact email */}
+          {pin.contactEmail && (
+            <div className="mt-3 flex items-center gap-2">
+              <Mail size={13} className="text-muted-gold shrink-0" />
+              <a
+                href={`mailto:${pin.contactEmail}`}
+                className="font-sans text-sm text-fidelity hover:text-forest transition-colors"
+              >
+                {pin.contactEmail}
+              </a>
+            </div>
+          )}
         </div>
 
         {/* Actions */}

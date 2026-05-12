@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { OnboardingCard } from '@/components/onboarding/OnboardingCard'
 import { MultiSelectChips } from '@/components/onboarding/MultiSelectChips'
 import { SingleSelect } from '@/components/onboarding/SingleSelect'
+import { ConfidenceScale } from '@/components/onboarding/ConfidenceScale'
 import { useApp } from '@/context/AppContext'
 
 const FIELD_OPTIONS = [
@@ -18,18 +19,8 @@ const FIELD_OPTIONS = [
   { value: 'Entrepreneurship', label: 'Entrepreneurship' },
   { value: 'Marketing', label: 'Marketing' },
   { value: 'Investment Management', label: 'Investment Mgmt' },
-  { value: 'Business', label: 'Business Operations' },
   { value: 'Healthcare Business', label: 'Healthcare Business' },
-  { value: 'Unsure', label: "I'm still exploring" },
-]
-
-const STAGE_OPTIONS = [
-  { value: 'exploring', label: 'Exploring majors' },
-  { value: 'first_internship', label: 'Looking for first internship' },
-  { value: 'preparing_resume', label: 'Preparing resume' },
-  { value: 'interviewing', label: 'Interviewing now' },
-  { value: 'have_internship', label: 'Already have an internship' },
-  { value: 'side_hustle', label: 'Starting a side hustle' },
+  { value: 'Unsure', label: "Still exploring" },
 ]
 
 const OPPORTUNITY_OPTIONS = [
@@ -41,7 +32,13 @@ const OPPORTUNITY_OPTIONS = [
   { value: 'resume_help', label: 'Resume help' },
   { value: 'interview_prep', label: 'Interview prep' },
   { value: 'networking', label: 'Networking events' },
-  { value: 'campus_jobs', label: 'Campus jobs' },
+]
+
+const NEG_EXP_OPTIONS = [
+  { value: 'yes', label: 'Yes, I have' },
+  { value: 'no_want', label: "No, but I want to" },
+  { value: 'no', label: 'No, not yet' },
+  { value: 'didnt_know', label: "I didn't know I could" },
 ]
 
 export default function CareerGoalsPage() {
@@ -50,37 +47,48 @@ export default function CareerGoalsPage() {
   const saved = state.onboarding.career
 
   const [interests, setInterests] = useState<string[]>(saved.careerInterests ?? [])
-  const [stage, setStage] = useState(saved.careerStage ?? '')
   const [oppTypes, setOppTypes] = useState<string[]>(saved.opportunityTypes ?? [])
+  const [negExp, setNegExp] = useState(saved.negotiationExperience ?? '')
+  const [confidence, setConfidence] = useState(saved.negotiationConfidence ?? 3)
 
   function handleNext() {
     const womenOnly = oppTypes.includes('women_only')
     dispatch({
       type: 'UPDATE_ONBOARDING_CAREER',
-      payload: { careerInterests: interests, careerStage: stage, opportunityTypes: oppTypes, womenOnlyInterest: womenOnly },
+      payload: {
+        careerInterests: interests,
+        opportunityTypes: oppTypes,
+        womenOnlyInterest: womenOnly,
+        negotiationExperience: negExp,
+        negotiationConfidence: confidence,
+      },
     })
-    router.push('/onboarding/salary-confidence')
+    router.push('/onboarding/community')
   }
 
   return (
     <OnboardingCard
-      caption="Step 6 of 9"
-      heading="Career growth is a money move too."
-      subheading="The right internship, mentor, or negotiation can shape your financial future."
+      caption="Step 4 of 5"
+      heading="Your career is your biggest wealth lever."
+      subheading="The right internship, negotiation, or mentor connection can change everything. Let's find those for you."
       onNext={handleNext}
-      onBack={() => router.push('/onboarding/financial-goals')}
+      onBack={() => router.push('/onboarding/money-habits')}
     >
       <div>
         <p className="font-sans text-sm text-warm-brown font-medium mb-2">What fields are you interested in?</p>
         <MultiSelectChips options={FIELD_OPTIONS} selected={interests} onChange={setInterests} columns={3} />
       </div>
       <div>
-        <p className="font-sans text-sm text-warm-brown font-medium mb-2">Where are you in your career journey?</p>
-        <SingleSelect options={STAGE_OPTIONS} value={stage} onChange={setStage} columns={2} />
+        <p className="font-sans text-sm text-warm-brown font-medium mb-2">What opportunities are you looking for?</p>
+        <MultiSelectChips options={OPPORTUNITY_OPTIONS} selected={oppTypes} onChange={setOppTypes} columns={2} />
       </div>
       <div>
-        <p className="font-sans text-sm text-warm-brown font-medium mb-2">What opportunities are you looking for?</p>
-        <MultiSelectChips options={OPPORTUNITY_OPTIONS} selected={oppTypes} onChange={setOppTypes} />
+        <p className="font-sans text-sm text-warm-brown font-medium mb-2">Have you ever negotiated pay?</p>
+        <SingleSelect options={NEG_EXP_OPTIONS} value={negExp} onChange={setNegExp} columns={2} />
+      </div>
+      <div>
+        <p className="font-sans text-sm text-warm-brown font-medium mb-2">How confident do you feel about negotiating salary?</p>
+        <ConfidenceScale value={confidence} onChange={setConfidence} labels={{ min: 'Not at all', max: 'Very confident' }} />
       </div>
     </OnboardingCard>
   )

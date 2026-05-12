@@ -21,6 +21,10 @@ export type AppAction =
   | { type: 'UPDATE_ONBOARDING_ACTIVITIES'; payload: Partial<ActivitiesProfile> }
   | { type: 'COMPLETE_ONBOARDING' }
   | { type: 'SET_BOARD'; payload: BoardPin[] }
+  | { type: 'ADD_USER_PIN'; payload: BoardPin }
+  | { type: 'REMOVE_PIN'; payload: string }
+  | { type: 'CYCLE_BOARD_VARIANT' }
+  | { type: 'SET_HAS_SEEN_GEN_ANIMATION' }
   | { type: 'SAVE_PIN'; payload: string }
   | { type: 'UNSAVE_PIN'; payload: string }
   | { type: 'OPEN_PIN_MODAL'; payload: string }

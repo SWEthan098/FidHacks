@@ -1,28 +1,29 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, Inter } from 'next/font/google'
+import { Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 import { AppProvider } from '@/context/AppContext'
 
-const cormorant = Cormorant_Garamond({
+const playfair = Playfair_Display({
   variable: '--font-cormorant',
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800'],
   style: ['normal', 'italic'],
 })
 
-const inter = Inter({
+const jakarta = Plus_Jakarta_Sans({
   variable: '--font-inter',
   subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
 })
 
 export const metadata: Metadata = {
-  title: 'Her Wealth — Financial Freedom for Every Woman',
+  title: 'ConnectHer — Financial Freedom for Every Woman',
   description: 'Your personalized community board for financial and career growth.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${inter.variable} h-full`}>
+    <html lang="en" className={`${playfair.variable} ${jakarta.variable} h-full`}>
       <body className="min-h-full">
         <AppProvider>{children}</AppProvider>
       </body>

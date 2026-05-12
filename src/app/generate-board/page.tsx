@@ -11,7 +11,7 @@ const MESSAGES = [
   'Pinning advice from women ahead of you…',
   'Matching women-only opportunities…',
   'Building your first money moves…',
-  'Creating your Her Wealth board…',
+  'Creating your ConnectHer board…',
 ]
 
 export default function GenerateBoardPage() {
@@ -26,6 +26,16 @@ export default function GenerateBoardPage() {
       return
     }
 
+    // Fast path: animation already seen — generate silently and bounce to /board
+    if (state.ui.hasSeenGenAnimation) {
+      generateBoard(state.onboarding, state.boardVariant).then((pins) => {
+        dispatch({ type: 'SET_BOARD', payload: pins })
+        router.replace('/board')
+      })
+      return
+    }
+
+    // Slow path: first time — run the 5-message animation
     let i = 0
     const interval = setInterval(() => {
       i++
@@ -36,7 +46,7 @@ export default function GenerateBoardPage() {
       }
     }, 500)
 
-    generateBoard(state.onboarding).then((pins) => {
+    generateBoard(state.onboarding, state.boardVariant).then((pins) => {
       dispatch({ type: 'SET_BOARD', payload: pins })
     })
 
@@ -46,10 +56,11 @@ export default function GenerateBoardPage() {
 
   useEffect(() => {
     if (done && state.board.length > 0) {
+      dispatch({ type: 'SET_HAS_SEEN_GEN_ANIMATION' })
       const t = setTimeout(() => router.push('/board'), 800)
       return () => clearTimeout(t)
     }
-  }, [done, state.board.length, router])
+  }, [done, state.board.length, router, dispatch])
 
   return (
     <div className="min-h-screen bg-cream flex flex-col items-center justify-center px-6">
@@ -61,7 +72,7 @@ export default function GenerateBoardPage() {
           <path d="M17 26 Q19 18 20 12 Q21 18 23 26" stroke="#C39B3A" strokeWidth="1" fill="none"/>
         </svg>
         <div>
-          <p className="font-serif text-2xl text-forest font-semibold">Her Wealth</p>
+          <p className="font-serif text-2xl text-forest font-semibold">ConnectHer</p>
           <p className="font-sans text-[10px] text-warm-brown/60 tracking-widest uppercase">Building your board</p>
         </div>
       </div>

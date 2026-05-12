@@ -34,6 +34,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
           sidebarOpen: true,
           activePinId: null,
           boardGenerated: board.length > 0,
+          hasSeenGenAnimation: board.length > 0,
         },
       },
     })

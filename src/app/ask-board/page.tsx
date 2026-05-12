@@ -1,12 +1,12 @@
 'use client'
 
-import { useEffect, useState, useRef } from 'react'
-import { useRouter } from 'next/navigation'
+import { Suspense, useEffect, useState, useRef } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { useApp } from '@/context/AppContext'
 import { AppShell } from '@/components/layout/AppShell'
 import { Button } from '@/components/ui/Button'
 import { submitAskBoard } from '@/lib/api'
-import { Send, MessageSquare } from 'lucide-react'
+import { Send, Sparkles } from 'lucide-react'
 
 const SUGGESTED = [
   'How do I ask if an internship is paid?',
@@ -19,18 +19,29 @@ const SUGGESTED = [
 
 interface Message { role: 'user' | 'board'; text: string }
 
-export default function AskBoardPage() {
+function AskBoardContent() {
   const router = useRouter()
+  const searchParams = useSearchParams()
   const { state } = useApp()
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'board', text: "Hi! I'm your Her Wealth board. Ask me anything about money, salary, internships, or career moves." },
+    { role: 'board', text: "Hi! I'm ConnectHer AI — your Her Wealth financial guide. Ask me anything about money, salary, internships, or career moves." },
   ])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const bottomRef = useRef<HTMLDivElement>(null)
+  const didAutoSend = useRef(false)
 
   useEffect(() => { if (!state.user) router.replace('/login') }, [state.user, router])
   useEffect(() => { bottomRef.current?.scrollIntoView({ behavior: 'smooth' }) }, [messages])
+
+  useEffect(() => {
+    const q = searchParams.get('q')
+    if (q && !didAutoSend.current) {
+      didAutoSend.current = true
+      handleSend(q)
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams])
 
   async function handleSend(text?: string) {
     const msg = text ?? input.trim()
@@ -39,7 +50,7 @@ export default function AskBoardPage() {
     setMessages((m) => [...m, { role: 'user', text: msg }])
     setLoading(true)
     try {
-      const reply = await submitAskBoard(msg)
+      const reply = await submitAskBoard(msg, messages)
       setMessages((m) => [...m, { role: 'board', text: reply }])
     } finally {
       setLoading(false)
@@ -51,12 +62,11 @@ export default function AskBoardPage() {
   return (
     <AppShell showRightPanel={false}>
       <div className="bg-warm-white border-b border-border-beige/60 px-6 py-3 flex items-center gap-2">
-        <MessageSquare size={16} className="text-muted-gold" />
-        <h1 className="font-serif text-xl text-forest font-semibold">Ask the Board</h1>
+        <Sparkles size={16} className="text-muted-gold" />
+        <h1 className="font-serif text-xl text-forest font-semibold">Ask ConnectHer AI</h1>
       </div>
 
       <div className="flex-1 flex flex-col min-h-0">
-        {/* Suggested questions */}
         <div className="bg-cream border-b border-border-beige/40 px-6 py-3">
           <p className="font-sans text-xs text-warm-brown/50 mb-2">Try asking:</p>
           <div className="flex flex-wrap gap-2">
@@ -72,7 +82,6 @@ export default function AskBoardPage() {
           </div>
         </div>
 
-        {/* Messages */}
         <div className="flex-1 overflow-y-auto px-6 py-4 flex flex-col gap-3">
           {messages.map((msg, i) => (
             <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
@@ -84,7 +93,7 @@ export default function AskBoardPage() {
                 }`}
               >
                 {msg.role === 'board' && (
-                  <p className="text-[10px] text-muted-gold font-semibold uppercase tracking-widest mb-1">Her Wealth</p>
+                  <p className="text-[10px] text-muted-gold font-semibold uppercase tracking-widest mb-1">ConnectHer AI</p>
                 )}
                 {msg.text}
               </div>
@@ -104,7 +113,6 @@ export default function AskBoardPage() {
           <div ref={bottomRef} />
         </div>
 
-        {/* Input */}
         <div className="border-t border-border-beige/60 bg-warm-white px-6 py-4">
           <form onSubmit={(e) => { e.preventDefault(); handleSend() }} className="flex gap-3">
             <input
@@ -120,5 +128,13 @@ export default function AskBoardPage() {
         </div>
       </div>
     </AppShell>
+  )
+}
+
+export default function AskBoardPage() {
+  return (
+    <Suspense>
+      <AskBoardContent />
+    </Suspense>
   )
 }

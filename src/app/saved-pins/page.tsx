@@ -55,6 +55,7 @@ export default function SavedPinsPage() {
           <PinGrid
             pins={savedPins}
             onPinClick={(id) => dispatch({ type: 'OPEN_PIN_MODAL', payload: id })}
+            onRemovePin={(id) => dispatch({ type: 'REMOVE_PIN', payload: id })}
           />
         </div>
       )}

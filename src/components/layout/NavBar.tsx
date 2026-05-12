@@ -26,7 +26,7 @@ export function NavBar() {
           <path d="M14 4 Q9 9 9 14 Q9 19 14 24 Q19 19 19 14 Q19 9 14 4Z" fill="#DDE3D2" opacity="0.7"/>
           <path d="M12 18 Q13.5 13 14 9 Q14.5 13 16 18" stroke="#C39B3A" strokeWidth="0.8" fill="none"/>
         </svg>
-        <span className="font-serif text-lg text-forest font-semibold hidden sm:block">Her Wealth</span>
+        <span className="font-serif text-lg text-forest font-semibold hidden sm:block">ConnectHer</span>
       </Link>
 
       {/* Right icons */}
